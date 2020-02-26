@@ -8,7 +8,9 @@ defmodule BucketHydra.MixProject do
       elixir: "~> 1.9",
       elixirc_paths: elixirc_paths(Mix.env),
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      package: package(),
+      description: "A bucket-based rate limit algorithm with support for clusters",
     ]
   end
 
@@ -28,6 +30,15 @@ defmodule BucketHydra.MixProject do
       {:telemetry, "~> 0.4.1"},
       {:phoenix_pubsub, "~> 1.1"},
       {:ex_doc, "~> 0.21.3", only: :dev}
+    ]
+  end
+
+  defp package() do
+    [
+      licenses: ["MIT"],
+      links: %{
+        "GitHub" => "https://github.com/ZennerIoT/bucket_hydra"
+      },
     ]
   end
 end
