@@ -4,7 +4,7 @@ defmodule BucketHydra.MixProject do
   def project do
     [
       app: :bucket_hydra,
-      version: "0.1.0",
+      version: "0.1.1",
       elixir: "~> 1.9",
       elixirc_paths: elixirc_paths(Mix.env),
       start_permanent: Mix.env() == :prod,
@@ -27,7 +27,7 @@ defmodule BucketHydra.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:telemetry, "~> 0.4.1"},
+      {:telemetry, ">= 0.0.1"},
       {:phoenix_pubsub, "~> 1.1"},
       {:ex_doc, "~> 0.21.3", only: :dev}
     ]
